@@ -1,6 +1,6 @@
 # Play-Store-Deeplearning-Analysis
 
-##Work Flow of Web Scraping:
+## Work Flow of Web Scraping:
 
 This play scraper is a python API. The following steps indicate the stage-by-stage function of
 each script used for getting the data from the play store.
@@ -51,11 +51,11 @@ categories into broad sections by using this script.
 This script does not take any parameter.
 WorkFlow :
 After narrowing down to the required columns which can be used for processing in the details
-sheet, those collective set of columns are combined to the reviews sheet. This is an optional scriptVersion June 6, 2019 submitted to Journal Not Specified
-9 of 21
+sheet, those collective set of columns are combined to the reviews sheet. 
 if the user wishes to continue using the specified set of columns for data analysis. Final Set of
 Columns that was combined to the Reviews Sheet as per Application ID: Total Average Rating,
 Installs, Total Number of Reviews, Required Android Version, Main Category Unique Val.
+
 • ReviewHead.py :
 This script takes one parameter:
 1. File Path: This parameter specifies the entire path and file name to be processed for balancing
