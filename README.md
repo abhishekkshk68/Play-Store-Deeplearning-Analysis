@@ -55,6 +55,7 @@ categories into broad sections by using this script.
 
 • CombineDetailsToReviews.py :
 This script does not take any parameter.
+
 WorkFlow :
 After narrowing down to the required columns which can be used for processing in the details
 sheet, those collective set of columns are combined to the reviews sheet. 
