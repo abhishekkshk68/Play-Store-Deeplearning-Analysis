@@ -11,6 +11,7 @@ This script takes following parameters
 2. category : Give one category name from the list of 58 categories mentioned in the table 2.
 3. path : The user can specify their own path else by default, the script would take the current
 directory to create a folder and save the response files.
+
 WorkFlow :
 The collection method of the play scraper is invoked by passing these parameters. The utils.py
 file in the play scraper package collects the HTML response returned from the request and
@@ -20,6 +21,7 @@ directory. Using pandas, we convert this JSON structure to CSV file format.
 • MultipleAppsReviews.py :
 This script takes just one parameter:
 1. path: The CSV file path of app details belonging to one category is given.
+
 WorkFlow :
 This script reads application ID column from the given sheet and creates a list. This list is further
 passed on as a parameter while invoking the reviews method of play scraper.
@@ -30,6 +32,7 @@ This script too takes two parameters:
 Trending details, is kept under the same path. The same is mentioned here.
 2. New File Name: After merging the details contained in all the categories into a new sheet, a
 new filename is assigned to it. The user can specify the name in this parameter.
+
 WorkFlow :
 The concat function provided by pandas is used to combine the data read from all the sheets
 falling under the specified path.
@@ -40,6 +43,7 @@ This script too takes two parameters:
 Trending applications’ reviews, is kept under the same path. The same is mentioned here.
 2. New File Name: After merging the reviews contained in all the categories into a new sheet, a
 new filename is assigned to it. The user can specify the name in this parameter.
+
 WorkFlow :
 The concat function provided by pandas is used to combine the data read from all the sheets
 falling under the specified path.
@@ -48,6 +52,7 @@ falling under the specified path.
 This script too takes two parameters :
 1. Original File Name: This parameter specifies the entire path and file name to be processed.
 2. New File Name : The updated file is saved with a new name specified by this parameter.
+
 WorkFlow :
 One application can be under multiple categories too. So the combined sheet consisted of a
 category column that involved multiple categories seperated by comma. We segregate the
@@ -67,6 +72,7 @@ Total Average Rating, Installs, Total Number of Reviews, Required Android Versio
 This script takes one parameter:
 1. File Path: This parameter specifies the entire path and file name to be processed for balancing
 the dataset.
+
 WorkFlow :
 The combined dataset consisted of varying number of rows for each application. To balance out
 the data frame, this script collects the top 20 rows of reviews of each application id.
