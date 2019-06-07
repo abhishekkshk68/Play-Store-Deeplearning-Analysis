@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+# This code belongs to Daniel Liu. The only changes done for the purpose of this study, is done in the Reviews function.
+# A list of App Ids is passed to this function to fetch reviews for mentioned app ids. 
+# The call to this function is given in MultipleAppsReviews.py file listed in this branch.
+
 import logging
 import json
 import pandas as pd
