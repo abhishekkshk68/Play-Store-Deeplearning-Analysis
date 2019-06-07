@@ -5,10 +5,15 @@ import play_scraper
 
 import pandas as pd
 
-get_data = (play_scraper.collection(collection = 'TRENDING', category = 'ENTERTAINMENT', results = 120, page = 1, detailed = True))
-with open(".\\Scripts_details_response\\ENTERTAINMENT.json", "w") as f1:
+collection_name='TRENDING'
+category_name'ENTERTAINMENT'
+path_json ='./FolderNameToSaveResponseFiles/ENTERTAINMENT.json'
+path_csv ='./FolderNameToSaveResponseFiles/ENTERTAINMENT.csv'
+
+get_data = (play_scraper.collection(collection = collection_name, category = , results = 120, page = 1, detailed = True))
+with open(".\\FolderNameToSaveResponseFiles\\ENTERTAINMENT.json", "w") as f1:
   json.dump(get_data, f1)
 f1.close()
 
-df = pd.read_json('./Scripts_details_response/ENTERTAINMENT.json')
-df.to_csv('./Scripts_details_response/ENTERTAINMENT.csv', encoding = 'utf-8')
+df = pd.read_json(path_json)
+df.to_csv(path_csv, encoding = 'utf-8')
