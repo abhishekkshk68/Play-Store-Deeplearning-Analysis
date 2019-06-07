@@ -1,7 +1,8 @@
 import pandas as pd
 import numpy as np
 import os
-data_from_Rev = pd.read_csv('./CombinedSheetOfReviewsDetails.csv')
+path='./FolderContainingCombinedSheetOfAppsReviews/CombinedSheetOfReviewsDetails.csv'
+data_from_Rev = pd.read_csv(path)
 
 n_val=4472 #Unique app ID length
 j=0
@@ -19,4 +20,3 @@ while(j<n_val):
 add_new_df.reset_index(drop=True, inplace=True)            
 print('shape after concat::',add_new_df.shape)
 print('Done!')
-
