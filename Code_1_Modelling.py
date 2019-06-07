@@ -317,7 +317,7 @@ model_combo12 = Model(inputs=[visible11, visible22], outputs=output33)
 print(model_combo12.summary())
 
 model_combo12.compile(optimizer='rmsprop' , loss = "sparse_categorical_crossentropy", metrics=["accuracy"])
-kaaam_chalao=np.array(RevRate_train)
+Test_output_param_tfidf=np.array(RevRate_train)
 #early_stopping_monitor = EarlyStopping(patience=10)
 
 Test_output_param=np.array(RevRate_test)
@@ -325,7 +325,7 @@ history3=model_combo12.fit([X_train,tf_train] ,kaaam_chalao,validation_data=([X_
 
 #Test_output_param=np.array(RevRate_test)
 
-loss_train_combo12, accuracy_train_combo12 = model_combo12.evaluate([X_train,tf_train] ,kaaam_chalao, verbose=0)
+loss_train_combo12, accuracy_train_combo12 = model_combo12.evaluate([X_train,tf_train] ,Test_output_param_tfidf, verbose=0)
 print("Training Accuracy: {:.4f}".format(accuracy_train_combo12))
 loss_test_combo12, accuracy_test_combo12 = model_combo12.evaluate([X_test,tf_test] ,Test_output_param, verbose=0)
 print("Testing Accuracy:  {:.4f}".format(accuracy_test_combo12))
@@ -373,7 +373,7 @@ kaaam_chalao=np.array(RevRate_train)
 history4=model_combo.fit([X_train,X_train_vec] ,kaaam_chalao,validation_data=([X_test, X_test_vec],Test_output_param), epochs=epochs_val,batch_size=batch_size_val)
 
 Test_output_param=np.array(RevRate_test)
-loss_train_combo, accuracy_train_combo = model_combo.evaluate([X_train,X_train_vec] ,kaaam_chalao, verbose=0)
+loss_train_combo, accuracy_train_combo = model_combo.evaluate([X_train,X_train_vec] ,Test_output_param_tfidf, verbose=0)
 print("Training Accuracy: {:.4f}".format(accuracy_train_combo))
 loss_test_combo, accuracy_test_combo = model_combo.evaluate([X_test,X_test_vec] ,Test_output_param, verbose=0)
 print("Testing Accuracy:  {:.4f}".format(accuracy_test_combo))
@@ -444,6 +444,6 @@ plt2.plot(epochs_1,acc_1,'bo',label='Training acc')
 plt2.plot(epochs_1,val_acc,'b',label='Validation acc')
 plt2.title('Training and Validation accuracy')
 plt2.xlabel('Epochs')
-plt2.ylabel('Loss')
+plt2.ylabel('Accuracy')
 plt2.legend()
 
