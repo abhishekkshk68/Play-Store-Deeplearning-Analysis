@@ -1,7 +1,9 @@
 import pandas as pd
 import numpy as np
 #Categorical Column Encoding - Details Sheet 
-data = pd.read_csv('./Combined_CSV_TopFree_Trending.csv')
+Original_file_path='./Combined_CSV_TopFree_Trending.csv'
+New_file_path='./Combined_CSV_TopFree_Trending_Updated.csv'
+data = pd.read_csv(Original_file_path)
 
 
 def Num_Main_Cat(types):
@@ -248,4 +250,4 @@ def Num_Main_Cat(types):
         if (fetched =='ANDROID_WEAR'):
             return 'PERFORMANCE_BOOST'
 data['Main_Category'] = data['category'].map(Num_Main_Cat)
-data.to_csv('./Combined_CSV_TopFree_Trending_Updated.csv',encoding='utf-8')
+data.to_csv(New_file_path,encoding='utf-8')
