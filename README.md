@@ -76,3 +76,23 @@ the dataset.
 WorkFlow :
 The combined dataset consisted of varying number of rows for each application. To balance out
 the data frame, this script collects the top 20 rows of reviews of each application id.
+
+
+
+The folder 'Extracted_CSV_Files' consists of extracted CSV files of application details and application reviews of all apps falling under two collections : 'TopFree' and 'Trending'.
+
+There is no particular date timestamp as to when these files were extracted as the scripts were individually created and fired. The data was retrieved mainly in last week of March 2019.
+
+List of Files uploaded:
+
+1.TopFree_Details : This folder consists of app details belonging to the collection name : TopFree.
+
+2.Trending_Details : This folder consists of app details belonging to the collection name : Trending.
+
+3.Trending_Reviews : This folder consists of app reviews belonging to the collection name : Trending.
+
+4.Since the Reviews belonging to the collection 'TopFree' was very huge , we have segregated it into two folders :
+
+(i)TopFree_Reviews_1
+
+(ii)TopFree_Reviews_2
